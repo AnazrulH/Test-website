@@ -1,0 +1,8 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "echo 'Deploying static site...'",
+    "build": "echo 'Building static site...'"
+  }
+}
