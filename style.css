@@ -1,0 +1,56 @@
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --accent:#3b82f6;
+  --muted:#6b7280;
+  --soft:#eef2ff;
+  --radius:10px;
+  --max-width:1100px;
+  --wrap-pad:20px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  line-height:1.5;
+}
+
+.wrap{max-width:var(--max-width);margin:0 auto;padding:var(--wrap-pad)}
+.site-header{background:linear-gradient(90deg,#ffffff, #f3f9ff);border-bottom:1px solid #e6eef8}
+.site-header .wrap{display:flex;flex-direction:column;gap:6px;padding:26px 20px}
+.site-header h1{margin:0;font-size:1.5rem}
+.lead{margin:0;color:var(--muted)}
+
+.main-grid{display:grid;grid-template-columns:260px 1fr;gap:20px;padding:24px 20px}
+.sidebar{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(20,40,80,0.04)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:6px 0}
+.sidebar a{display:block;padding:10px;border-radius:6px;color:#0f172a;text-decoration:none;font-weight:600}
+.sidebar a:hover{background:var(--soft)}
+
+.mini-cta{margin-top:14px}
+.btn{display:inline-block;padding:8px 12px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;font-weight:700}
+
+.content{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 24px rgba(18,44,84,0.04)}
+.content h2{margin-top:0}
+.note{background:#fff9f0;border-left:4px solid #ffd19a;padding:12px;margin-top:18px;border-radius:8px;color:#92400e}
+
+/* Accordion styles for pages */
+.acc-btn{
+  background:transparent;border:1px solid #e6eef8;padding:12px;border-radius:8px;width:100%;text-align:left;font-weight:700;cursor:pointer;margin-top:10px;
+}
+.acc-panel{display:none;padding:12px;margin-top:6px;background:#fbfcff;border-radius:8px;border:1px dashed #edf2ff;color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+  .main-grid{grid-template-columns:1fr; padding:12px}
+  .sidebar{order:2}
+  .content{order:1}
+}
+
+/* small code blocks */
+pre, code {background:#0f172a;color:#f8fafc;padding:4px 6px;border-radius:6px;display:inline-block}

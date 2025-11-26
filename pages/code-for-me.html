@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Canva AI – Code for Me</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <a href="../index.html">← Kembali</a>
+    <h2>Canva AI — "Code for Me" (Gamification)</h2>
+    <p class="muted">Modul menerangkan bagaimana Canva AI boleh membantu menjana kod HTML/CSS/JS ringkas untuk aktiviti interaktif. :contentReference[oaicite:5]{index=5}</p>
+
+    <h3>Contoh: Permainan Huruf (in-page interactive)</h3>
+    <p>Tekan <strong>Mula</strong> untuk bermain. Modul menyarankan permainan seperti "Cari gambar Ayam untuk huruf A".</p>
+
+    <div style="margin-top:12px">
+      <button class="btn" id="start-game">Mula Permainan</button>
+    </div>
+
+    <div id="game-root" style="margin-top:16px;"></div>
+
+    <h3 style="margin-top:26px">Code snippet (example)</h3>
+    <p>Anda boleh copy-paste kod ini ke Canva 'Code for Me' atau web page:</p>
+    <pre>&lt;button onclick="alert('Betul!')">Pilih</pre>
+
+    <p class="muted">Nota: kod interaktif yang lebih menarik memerlukan HTML + CSS + JS — kami menyediakan contoh di laman ini.</p>
+  </div>
+
+<script src="../script.js"></script>
+<script>
+  document.getElementById('start-game').addEventListener('click', () => {
+    // call function defined in global script.js
+    if (typeof startLetterGame === 'function') {
+      startLetterGame();
+    } else {
+      alert('Game belum tersedia.');
+    }
+  });
+</script>
+</body>
+</html>
